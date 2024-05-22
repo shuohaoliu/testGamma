@@ -1,0 +1,7 @@
+name: Hello World
+on: [push]
+jobs:
+  Hello-World-Job:
+    runs-on: codebuild-gamma-test-github-${{ github.run_id }}-${{ github.run_attempt }}
+    steps:
+      - run: echo "This is a test for gamma-test-github project in CodeBuild gamma environment!"
